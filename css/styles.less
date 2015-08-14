@@ -1,0 +1,223 @@
+// Choose your skin
+@import (reference) 'louis-vuitton';
+// @import (reference) 'target';
+
+// Site styling
+html, body {
+	// width: 100%;
+	// height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	text-align: center;
+
+	.generic-font;
+	.body-background;
+
+	#content {
+		width: 960px;
+		// height: 100%;
+		margin: 0 auto;
+		padding: 20px 40px;
+		display: inline-block;
+		text-align: left;
+
+		.content-background;
+
+		#logo {
+			.logo;
+		}
+
+		#intro {
+			margin: 20px 0;
+		}
+
+		#order_processing {
+			width: 100%;
+		
+			#order_summary {
+				width: 30%;
+				float: left;
+
+				font-size: 14px;
+				line-height: 20px;
+				
+				display: table;
+
+				padding: 5px;
+
+				.order-summary-border;
+
+				.header, .row {
+					display: table-row;
+
+					.col1, .col2 {
+						display: table-cell;
+						height: 30px;
+						line-height: 30px;
+					}
+				}
+
+				.header {
+					font-weight: bold;
+				}
+
+				.row.subtotal > div {
+					.subtotal-line;
+				}
+
+				.row.total > div {
+					.total-line;
+				}
+			}
+
+			#payment_form {
+				width: 68%;
+				float: right;
+
+				input[type='text'] {
+					width: 100%;
+					font-size: 18px;
+					line-height: 40px;
+					padding: 0 10px;
+
+					margin: 0 0 10px 0;
+
+					.payment-form-border;
+				}
+
+				input[name='billing_first_name'] {
+					width: 40%;
+				}
+				
+				input[name='billing_last_name'] {
+					width: 59%;
+					float: right;
+				}
+
+				input[name='billing_city'] {
+					width: 64%;
+				}
+
+				#billing_state {
+					width: 15%;
+					font-family: Arial;
+					font-size: 18px;
+					line-height: 40px;
+					padding: 0 10px;
+
+					margin: 0 0 10px 0;
+
+					background-color: #FFFFFF;
+					color: #A9A9A9;
+					display: inline-block;
+
+					cursor: pointer;
+
+					.payment-form-border;
+
+					#billing_state_dropdown {		
+					    position: absolute;
+					    background-color: #FFFFFF;
+					    width: 90px;
+					    margin-left: -11px;
+					    height: 120px;
+					    overflow-y: auto;
+					    display: none;
+
+					    .payment-form-border;
+
+						.state_choice {
+							padding: 0 10px;
+						}
+
+					    .state_choice:hover {
+							background-color: #DDDDDD;
+					    }
+					}
+				}
+
+				input[name='billing_zip_code'] {
+					width: 19%;
+					float: right;
+				}
+
+				input[name='billing_credit_card_number'] {
+					width: 75%;
+				}
+
+				input[name='billing_credit_card_security'] {
+					width: 24%;
+					float: right;
+				}
+
+				#terms {
+					float: left;
+					font-size: 14px;
+				}
+
+				#submit {
+					cursor: pointer;
+					float: right;
+					
+					.submit-button;
+				}
+			}
+		}
+
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.error {
+	color: #FF0000;
+	border-color: #FF0000 !important;
+}
+
+.state_error {
+	color: #A9A9A9 !important;
+}
+
+.arrow {
+	float: right;
+	color: #000000;
+}
+
+// Mobile styles
+@media screen and (max-device-width: 959px) {
+	#content {
+		width: 100% !important;
+		padding: 20px !important;
+	}
+
+	#payment_form {
+		width: 100% !important;
+		float: none !important;
+	}
+
+	#order_summary {
+		float: none !important;
+		width: 100% !important;
+		margin-bottom: 20px !important;
+	}
+}
+
+@media screen and (max-device-width: 600px) {
+	input[type="text"], #billing_state {
+		width: 100% !important;
+		float: none !important;
+	}
+
+	#billing_state_dropdown {
+	    width: 100% !important;
+		position: relative !important;
+		border: none !important;
+		margin-left: -10px !important;
+	}
+}
