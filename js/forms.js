@@ -95,7 +95,7 @@ $(function() {
 	// The validation begins...
 	$('#submit').click(function() {
 		// Check for blank fields.
-		$('input[type="text"').each(function() {
+		$('input[type="text"]').each(function() {
 			if ($(this).attr('name') != 'billing_address_2') {
 				if ($(this).val() === '') {
 					$(this).addClass('error');
@@ -108,7 +108,7 @@ $(function() {
 		});
 
 		// State pulldown menu.
-		if ($('input[name="billing_state"').val() == '') {
+		if ($('input[name="billing_state"]').val() == '') {
 			$('#billing_state').addClass('error').addClass('state_error');
 		}
 
