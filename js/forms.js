@@ -127,7 +127,7 @@ $(function() {
 
 	});
 
-	$('input[type="text"').blur(function() {
+	$('input[type="text"]').blur(function() {
 		if ($(this).val() != '') {
 			$(this).removeClass('error');
 		}
